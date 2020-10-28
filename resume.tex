@@ -1,0 +1,163 @@
+% Repo: https://github.com/jack-alope/resume
+
+\documentclass[letterpaper,11pt]{article}
+\pagestyle{empty}
+
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper, portrait, margin=.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\usepackage{tabularx}
+
+% -------------- Section Header Style ----------------------------
+\titleformat*{\section}{\bfseries\Large\titlerule\vspace{-17pt}}
+% ----------------------------------------------------------------
+
+% -------------= Items Header Style -------------------------------
+\newcommand{\itemHeadings}[4]{
+    \begin{tabularx}{\textwidth} {>{\hsize=.7\textwidth\raggedright\arraybackslash}X 
+   >{\raggedleft\arraybackslash}X}
+      #1 & \small#2 \\
+      #3 & \small#4
+    \end{tabularx}
+    \\
+}
+
+\newcommand{\itemitems}[1]{
+    \begin{tabularx}{\textwidth} {>{\raggedleft\arraybackslash}X >{\hsize=.95\textwidth\raggedright\arraybackslash}X}
+      &- \small#1 \\
+    \end{tabularx}
+    \\
+}
+
+\newcommand{\projHeadings}[2]{
+    \begin{tabularx}{\textwidth} {>{\hsize=.7\textwidth\raggedright\arraybackslash}X 
+   >{\raggedleft\arraybackslash}X}
+      #1 & \small#2 \\
+    \end{tabularx}
+    \\
+}
+
+\newcommand{\projitems}[1]{
+    \begin{tabularx}{\textwidth} {>{\raggedleft\arraybackslash}X | >{\hsize=.95\textwidth\raggedright\arraybackslash}X}
+      & \small#1 \\
+    \end{tabularx}
+    \\
+}
+% -----------------------------------------------------------------
+
+% ------------- Heading Style -------------------------------------
+\newcommand{\heading}[3]{
+    \hspace{-9mm}
+    \begin{tabular}{p{.4\textwidth} >{\raggedleft}p{.57\textwidth}}
+        \textbf{\Huge{#1}}\vspace{5mm} & #2 $|$ #3 \\
+    \end{tabular}
+}
+% -----------------------------------------------------------------
+
+
+\begin{document}
+
+% -------- Heading -------------------------------------------------------------
+\heading
+    {Jack F. Murphy}
+    {jfm@jack.engineering}
+    {\href{https://jack.engineering}{https://jack.engineering}}
+% ------------------------------------------------------------------------------
+
+% ----------- Education --------------------------------------------------------
+\section*{Education}
+    \projHeadings
+          {\textbf{Trinity College Dublin} $|$ \emph{B.A.I + M.A.I in Biomedical Engineering}}
+          {Expected 2018 - 2023}
+          {}
+% ------------------------------------------------------------------------------
+
+% ----------- Publications ----------------------------------------------------------
+\section*{Publications}
+    \projHeadings
+          {\textbf{Peer Reviewed} $|$ Full list at \emph{\href{https://pubs.jack.engineering}{https://pubs.jack.engineering}}}
+          {}
+         \projitems
+            {Murphy, Jack F et al. “Adult human cardiac stem cell supplementation effectively increases contractile function and maturation in human engineered cardiac tissues.” Stem cell research \& therapy vol. 10,1 373. 4 Dec. 2019, doi:10.1186/s13287-019-1486-4}
+% -----------------------------------------------------------------------------------
+
+% ----------- Research Experience ---------------------------------------------------
+\section*{Research Experience}
+    \itemHeadings
+          {\textbf{Costa Lab, Icahn School of Medicine at Mount Sinai}}
+          {March 2017 - Present}
+          {Research Assistant}
+          {New York City, USA}
+        \itemitems
+            {Maintained human induced-Pluripotent stem cells, mesenchymal stem cells, and cardiac stem cells in culture.}
+        \itemitems
+            {Differentiated pluripotent stem cells into cardiomyocytes and fabricated 3D human engineered cardiac tissues.}
+        \itemitems
+            {Used LabView and MatLab to collect and analyze data on cardiac function.}
+        \itemitems
+            {Designed and printed 3D accessories using Autodesk Fusion 360 to help with the data collection process.}
+    \itemHeadings
+          {\textbf{Monaghan Lab, Trinity Centre for Bioengineering}}
+          {September 2018 - Present}
+          {Research Assistant}
+          {Dublin, Ireland}
+        \itemitems
+            {Stained and analyzed tissues using polarized light microscopy to understand the effects of a silicone implant.}
+        \itemitems
+            {Helped to develop a testing apparatus to determine if a scaffold propagates an electric pulse between tissue samples.}
+    \itemHeadings
+        {\textbf{Center for Excellence in Youth Education at Mount Sinai}}
+        {September 2016 – June 2018}
+        {Research Scholar}
+        {New York City, USA}
+        \itemitems
+            {Helped guide middle school students through dissections of the heart, eye, and kidney.}
+        \itemitems
+            {Participated in the New York City Science and Engineering Fair with research carried out in the Costa Lab.}
+% -----------------------------------------------------------------------------------
+
+% ----------- Projects ---------------------------------------------------  
+\section*{Projects}
+    \projHeadings
+        {\textbf{Cardiac Tissue Tracking System} $|$ 
+          \href{https://mtt.murphs.team} {\emph{https://mtt.mutphs.team}}}
+          {June 2020 -- Present}
+        \projitems
+            {\textbf{\emph{Project Goal:}} Develop a system that can record, track, and analyze multiple cardiac tissue strips remotely.}
+        \itemitems
+            {Designed a system capable of remotely recording multiple tissues from within an incubator.}
+        \itemitems
+            {Created a Flask app to accept user input of post locations and used OpenCV libraries to track deflections.}
+        \itemitems
+            {Used Plotly.js libraries to build a graphing dashboard that allows for complex contractile function analysis.}
+% ------------------------------------------------------------------------
+
+% ----------- Volunteer Experience ---------------------------------------------------
+\section*{Volunteer Experience}
+    \itemHeadings
+          {\textbf{Life Rolls on Foundation}}
+          {August 2018 - Present}
+          {Mid-Level Water Volunteer}
+          {New York City, USA}
+        \itemitems
+            {Annually, help give people with disabilities the opportunity to surf by helping position them on the board, carry them out past the wave breaks, and then guide their path on the way back in.}
+    \itemHeadings
+          {\textbf{Voluntary Tuition Program}}
+          {September 2018 - May 2019}
+          {Maths Tutor}
+          {Dublin, Ireland}
+        \itemitems
+            {Met with a primary school student each week to aid them in their understanding of maths.} 
+% -----------------------------------------------------------------------------------
+
+% ----------- Skills --------------------------------------------------------------
+\section*{Skills}
+    \projitems
+        {\textbf{Programming:} C++, Python including Flask, Docker, and OpenCV \textbf{Data Analysis:} ImageJ, Graphpad Prism 8 \newline \textbf{Microscopy:} Tissue Staining, Confocal, Polarized Light \textbf{CAD:} OpenSCAD, SW,  Autodesk[Inventor, Revit, Fusion]}
+
+
+% -----------------------------------------------------------------------------------
+
+\end{document}
