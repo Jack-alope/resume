@@ -4,7 +4,7 @@
 \pagestyle{empty}
 
 \usepackage[utf8]{inputenc}
-\usepackage[letterpaper, portrait, margin=.5in]{geometry}
+\usepackage[a4paper, portrait, margin=.5in]{geometry}
 \usepackage{hyperref}
 \usepackage{titlesec}
 
@@ -16,7 +16,7 @@
 
 % -------------= Items Header Style -------------------------------
 \newcommand{\itemHeadings}[4]{
-    \begin{tabularx}{\textwidth} {>{\hsize=.7\textwidth\raggedright\arraybackslash}X 
+    \begin{tabularx}{\textwidth} {>{\hsize=.6\textwidth\raggedright\arraybackslash}X 
    >{\raggedleft\arraybackslash}X}
       #1 & \small#2 \\
       #3 & \small#4
@@ -39,11 +39,19 @@
     \\
 }
 
+\newcommand{\projH}[1]{
+    \begin{tabularx}{\textwidth} {>{\hsize=\textwidth\raggedright\arraybackslash}X}
+      #1 \\
+    \end{tabularx}
+    \\
+}
+
 \newcommand{\projitems}[1]{
     \begin{tabularx}{\textwidth} {>{\raggedleft\arraybackslash}X | >{\hsize=.95\textwidth\raggedright\arraybackslash}X}
       & \small#1 \\
     \end{tabularx}
-     \\
+    \\
+    \vspace{5pt}
 }
 % -----------------------------------------------------------------
 
@@ -56,111 +64,197 @@
 }
 % -----------------------------------------------------------------
 
+\newcommand{\sect}[1]{
+    \section*{#1}
+    \vspace{-3mm}
+}
 
 \begin{document}
 
 % -------- Heading -------------------------------------------------------------
 \heading
     {Jack F. Murphy}
-    {jack@mrph.dev}
-    {\href{https://jack.engineering}{https://jack.engineering}}
+    {email: jack@mrph.dev}
+    {website: \href{https://jack.engineering}{https://jack.engineering}}
 % ------------------------------------------------------------------------------
 
+% ----------- Research Interests ------------------------------------------------------
+%\section*{Research Interests}
+\noindent
+
+% --------------------------------------------------------------------------------------
+
 % ----------- Education --------------------------------------------------------
-\section*{Education}
+\sect{Education}
     \projHeadings
           {\textbf{Trinity College Dublin} $|$ \emph{B.A.I in Biomedical Engineering}}
           {Expected 2018 - 2022}
-          {}
+        \itemitems{Current grade: First Class Honours (71\%) $|$ approx. 3.73 GPA equivalent}
 % ------------------------------------------------------------------------------
 
 % ----------- Publications ----------------------------------------------------------
-\section*{Publications}
-    \projHeadings
-          {\textbf{Peer Reviewed} $|$ Full list at \emph{\href{https://jack.engineering/publications}{https://jack.engineering/publications}}}
-          {}
-         \projitems
-            {Murphy, Jack F et al. “Adult human cardiac stem cell supplementation effectively increases contractile function and maturation in human engineered cardiac tissues.” Stem cell research \& therapy vol. 10,1 373. 4 Dec. 2019, \href{https://doi.org/10.1186/s13287-019-1486-4}{doi:~10.1186/s13287-019-1486-4}
-            }
+\sect{Publications}
+    \projHeadings{\textbf{Journal Articles}}{}
+        \itemitems
+            {J.F. Murphy \emph{et al., Manuscript submitted for publication.} (2021)}
+        \itemitems
+            {J.F. Murphy \emph{et al., Stem Cell Research and Therapy.} \href{https://doi.org/10.1186/s13287-019-1486-4}{doi:~10.1186/s13287-019-1486-4} (2019)}
+        \itemitems
+            {J. Mayourian \emph{et al., Circulation Research.} \href{https://doi.org/10.1161/CIRCRESAHA.118.312420}{doi: 10.1161/CIRCRESAHA.118.312420} (2018)}
+    \projHeadings{\textbf{Book Chapters}}{}
+        \itemitems
+            {I. C. Turnbull \emph{et al., Methods in Molecular Biology.} \href{https://doi.org/10.1007/978-1-4939-8597-5\_11}{doi: 10.1007/978-1-4939-8597-5\_11(2018)}}
+    \projHeadings{\textbf{Conference Abstracts}}{}
+        \itemitems
+            {J.F. Murphy \emph{et al., Biomedical Engineering Society Annual Meeting.} (2019)}
+        \itemitems
+            {S.I. Salazar \emph{et al., New York Academy of Sciences.} (2019)}
+        \itemitems
+            {J.F. Murphy \emph{et al., American Heart Association Scientific Sessions.} (2018)}
+        \itemitems
+            {I.C. Turnbull \emph{et al., International Society for Stem Cell Research.} (2018)}
+        \itemitems
+            {J.F. Murphy \emph{et al, New York City Science and Engineering Fair.} (2018)}
+    
 % -----------------------------------------------------------------------------------
 
 % ----------- Research Experience ---------------------------------------------------
-\section*{Research Experience}
+\sect{Research Experience}
+    \itemHeadings
+        {\textbf{Monaghan Lab, Trinity Centre for Bioengineering}}
+        {\textbf{September 2018 - present}}
+        {Research Assistant}
+        {Dublin, Ireland}
+        \itemitems
+            {Histological staining and analysis of tissue explants with polarized light microscopy to characterize fibrotic encapsulation around next-generation silicone implants. In-depth image analysis using threshold segmentation and ROI normalization.}
+        \itemitems
+            {Development of a setup to determine propagation of electric pulses across biomaterial bridge between fresh muscle tissues ex vivo.}
+        \itemitems
+            {Key exchange point of international collaboration between the Costa Lab and the Monaghan Lab. Focused on adapting an engineered cardiac tissue bioreactor for use with a novel pacing system.}
+    \itemHeadings
+        {\textbf{Turnbull Lab, Icahn School of Medicine at Mount Sinai}}
+        {\textbf{June 2021 - present}}
+        {Research Assistant}
+        {New York City, USA}
+        \itemitems
+            {Developed Rian\'u, a web application capable of tracking and analyzing multiple cardiac tissues simultaneously.}
+        \itemitems
+            {Modified the existing tissue recording setup to record multiple tissues in a single frame.}
     \itemHeadings
           {\textbf{Costa Lab, Icahn School of Medicine at Mount Sinai}}
-          {March 2017 - Present}
+          {\textbf{March 2017 - September 2020}}
           {Research Assistant}
           {New York City, USA}
         \itemitems
-            {Maintained human induced-Pluripotent stem cells, mesenchymal stem cells, and cardiac stem cells in culture.}
+            {Maintained induced-pluripotent stem cells (iPSCs), mesenchymal stem cells, and cardiac stem cells in culture.}
         \itemitems
-            {Differentiated pluripotent stem cells into cardiomyocytes and fabricated 3D human engineered cardiac tissues.}
+            {Differentiated iPSCs into cardiomyocytes and fabricated 3D human engineered cardiac tissues. Used engineered tissue as a testing platform for various drug- and cell-based therapies for cardiac regeneration}
         \itemitems
-            {Used LabView and MatLab to collect and analyze data on cardiac function.}
+            {Used existing LabVIEW and MATLAB software to collect and analyze data on cardiac function.}
         \itemitems
-            {Designed and printed 3D accessories using Autodesk Fusion 360 to help with the data collection process.}
-    \itemHeadings
-          {\textbf{Monaghan Lab, Trinity Centre for Bioengineering}}
-          {September 2018 - Present}
-          {Research Assistant}
-          {Dublin, Ireland}
-        \itemitems
-            {Stained and analyzed tissues using polarized light microscopy to understand the effects of a silicone implant.}
-        \itemitems
-            {Developed a testing apparatus to determine if a scaffold propagates an electric pulse between tissue samples.}
-        \itemitems
-            {Established a collaboration with the Costa Lab, and introduced a engineered cardiac tissue system into the lab.}
+            {Designed and printed 3D accessories to help with the data collection process.}
     \itemHeadings
         {\textbf{Center for Excellence in Youth Education at Mount Sinai}}
-        {September 2016 – June 2018}
+        {\textbf{September 2016 – June 2018}}
         {Research Scholar}
         {New York City, USA}
         \itemitems
-            {Helped guide middle school students through dissections of the heart, eye, and kidney.}
+            {Guided middle school students through laboratory dissection of the heart, eye, and kidney.}
         \itemitems
-            {Participated in the New York City Science and Engineering Fair with research carried out in the Costa Lab.}
+            {Finalist in the New York City Science and Engineering Fair with research carried out in the Costa Lab.}
+    \itemHeadings
+        {\textbf{Dean Lab, Columbia University}}
+        {\textbf{June 2017 - December 2017}}
+        {Lab Intern}
+        {New York City, USA}
+        \itemitems
+            {Exfoliated graphite to get monolayers of graphene and used a bright field microscope to  record locations.}
+        \itemitems
+            {Created a graphene device insulated by boron nitride and used atomic force microscopy to identify imperfections.}
 % -----------------------------------------------------------------------------------
 
 % ----------- Projects ---------------------------------------------------  
-\section*{Projects}
-    \projHeadings
-        {\textbf{Cardiac Tissue Tracking System} $|$ 
-          \href{https://rianu.mrph.dev} {\emph{https://rianu.mrph.dev}}}
-          {June 2020 -- Present}
-        \projitems
-            {\textbf{\emph{Project Goal:}} Develop a system that can track and analyze multiple engineered cardiac tissues simultaneously.}
+\sect{Projects}
+    \projH{\textbf{Rian\'u:} Multi-tissue tracking software for increased throughput of engineered cardiac tissue screening.}
         \itemitems
-            {Created a web application to accept user input of post locations and used OpenCV libraries to track contractions.}
+            {Identified a bottleneck in existing engineered cardiac tissue analysis software.}
         \itemitems
-            {Utilized Plotly.js libraries to build a graphing dashboard that allows for complex contractile function analysis.}
+            {Created a web application capable of tracking and analyzing multiple engineered cardiac tissue simultaneously.}
         \itemitems
-            {Leveraged Docker containers to allow for simple, operating system agnostic deployment.}
+            {Validated this software against existing software in the field and provided detailed documentation for its use.}
+    \projH{\textbf{Web Design}}
+        \itemitems
+            {Developed my personal portfolio website that automatically updates citation counts by paper DOI.}
+        %\itemitems
+        %    {Released the custom theme open-source \href{https://themes.gohugo.io/themes/sourgough-starter/}{(\small themes.gohugo.io/themes/sourgough-starter}).}
+        \itemitems
+            {Created websites for various projects, other students, a student society, a band, and for software documentation.}
 % ------------------------------------------------------------------------
 
 % ----------- Volunteer Experience ---------------------------------------------------
-\section*{Volunteer Experience}
-    \itemHeadings
-          {\textbf{Life Rolls on Foundation}}
-          {August 2018 - August 2019}
-          {Mid-Level Water Volunteer}
-          {New York City, USA}
-        \itemitems
-            {Annually, help give people with disabilities the opportunity to surf by helping position them on the board, carry them out past the wave breaks, and then guide their path on the way back in.}
-    \itemHeadings
-          {\textbf{Voluntary Tuition Program}}
-          {September 2018 - May 2019}
-          {Maths Tutor}
-          {Dublin, Ireland}
-        \itemitems
-            {Met with a primary school student each week to aid them in their understanding of maths.} 
+%\section*{Volunteer Experience}
+%    \itemHeadings
+%          {\textbf{Life Rolls on Foundation}}
+%          {August 2018 - August 2019}
+%          {Mid-Level Water Volunteer}
+%          {New York City, USA}
+%        \itemitems
+%            {Annual event to give people living with paralysis the opportunity to surf by helping position them on the board, carry them out past the wave breaks, and then guide their path on the way back in.}
+%    \itemHeadings
+%          {\textbf{Voluntary Tuition Program}}
+%          {September 2018 - May 2019}
+%          {Maths Tutor}
+%          {Dublin, Ireland}
+%        \itemitems
+%            {Met with a primary school student each week to aid them in their understanding of geometry.} 
 % -----------------------------------------------------------------------------------
 
-% ----------- Skills --------------------------------------------------------------
-\section*{Skills}
-    \projitems
-        {\textbf{Programming:} C++, Python including Flask, Docker, and OpenCV \textbf{Data Analysis:} ImageJ, Graphpad Prism, R \newline \textbf{Microscopy:} Tissue Staining, Confocal, Polarized Light \textbf{CAD:} OpenSCAD, SW,  Autodesk[Inventor, Revit, Fusion]}
+\sect{Further Information}
+    \projHeadings{\textbf{Awards}}{}
+        \itemitems
+            {New York City Science and Engineering Fair (NYCSEF) Finalist, Second Award (2018)}
+        \itemitems
+            {Frank W. and Jane J. Stahl Memorial Award for Technical Excellence, NYCSEF (2018)}
+        \itemitems
+            {Naval Science Award, Office of Naval Research, NYCSEF (2018)}
+    \projHeadings{\textbf{Memberships}}{}
+        \itemitems
+            {Engineers Ireland, Student Membership (2018 - present)}
+    \projHeadings{\textbf{Citizenships}}{}
+        \itemitems
+            {United States of America}
+        \itemitems
+            {Republic of Ireland}
+    \projHeadings{\textbf{Skills}}{}
+        \itemitems
+            {Programming: C++, Docker, Python including OpenCV, Web design including Hugo and Bootstrap}
+        \itemitems
+            {CAD: Solidworks, Autodesk Fusion 360, Revit and Inventor, OpenSCAD}
+        \itemitems
+            {Microscopy: Tissue staining, sectioning, and mounting, Confocal, Polarized Light}
+        \itemitems
+            {Data Analysis: ImageJ/FIJI, Graphpad Prism, R, Excel}
+        \itemitems
+            {Office: \LaTeX, EndNote 20, Microsoft Word}
+            
+\sect{References}
+\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+    \textbf{Kevin D. Costa} \newline 
+    Associate Professor of Medicine, Cardiology \newline
+    Icahn School of Medicine at Mount Sinai \newline
+    kevin.costa@mssm.edu
+    & 
+    \textbf{Michael G. Monaghan} \newline
+    Ussher Assistant Professor, Biomedical Engineering \newline
+    Trinity College Dublin \newline
+    monaghmi@tcd.ie
+    \\ \vspace*{.2cm}
 
-
-% -----------------------------------------------------------------------------------
-
+    \textbf{Irene C. Turnbull} \newline
+    Assistant Professor of Medicine, Cardiology \newline
+    Icahn School of Medicine at Mount Sinai \newline
+    irene.turnbull@mssm.edu
+    
+    \\
+\end{tabular}
 \end{document}
