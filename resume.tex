@@ -57,7 +57,7 @@
 
 % ------------- Heading Style -------------------------------------
 \newcommand{\heading}[3]{
-    \hspace{-9mm}
+    \hspace{-15mm}
     \begin{tabular}{p{.4\textwidth} >{\raggedleft}p{.57\textwidth}}
         \textbf{\Huge{#1}}\vspace{5mm} & #2 $|$ #3 \\
     \end{tabular}
@@ -65,8 +65,9 @@
 % -----------------------------------------------------------------
 
 \newcommand{\sect}[1]{
+    \vspace{-.4em}
     \section*{#1}
-    \vspace{-3mm}
+    \vspace{-3.5mm}
 }
 
 \begin{document}
@@ -86,10 +87,21 @@
 
 % ----------- Education --------------------------------------------------------
 \sect{Education}
-    \projHeadings
-          {\textbf{Trinity College Dublin} $|$ \emph{B.A.I in Biomedical Engineering}}
-          {Expected 2018 - 2022}
-        \itemitems{Current grade: First Class Honours (71\%) $|$ approx. 3.73 GPA equivalent}
+    \itemHeadings
+        {\textbf{Trinity College Dublin, The University of Dublin}}
+        {\textbf{Expected 2018 - 2022}}
+        {\emph{B.A.I in Biomedical Engineering}}
+        {Dublin, Ireland}
+        \itemitems
+            {First Class Honours ($>$70\%) every year to date}
+    \itemHeadings
+        {\textbf{The High School for Math, Science, and Engineering}}
+        {\textbf{September 2014 - June 2018}}
+        {\emph{New York Regents Diploma, Advanced Designation with Honors}}
+        {New York City, USA}
+        \itemitems
+            {Community Service and Mastery in Mathematics Distinctions}
+
 % ------------------------------------------------------------------------------
 
 % ----------- Publications ----------------------------------------------------------
@@ -126,14 +138,18 @@
         {Research Assistant}
         {Dublin, Ireland}
         \itemitems
-            {Histological staining and analysis of tissue explants with polarized light microscopy to characterize fibrotic encapsulation around next-generation silicone implants. In-depth image analysis using threshold segmentation and ROI normalization.}
-        \itemitems
-            {Development of a setup to determine propagation of electric pulses across biomaterial bridge between fresh muscle tissues ex vivo.}
+            {Provide expertise to PhD students on 3D design and printing, induced-pluripotent stem cell culture and differentiation, and engineered cardiac tissue fabrication techniques. }
         \itemitems
             {Key exchange point of international collaboration between the Costa Lab and the Monaghan Lab. Focused on adapting an engineered cardiac tissue bioreactor for use with a novel pacing system.}
+        \itemitems
+            {Performed histological staining and analysis of tissue explants with polarized light microscopy to characterize fibrotic encapsulation around next-generation silicone implants. }
+        \itemitems
+            {Carried out in-depth image analysis using threshold segmentation and region-of-interest normalization.}
+        \itemitems
+            {Developed a setup to determine propagation of electric pulses across biomaterial bridge between fresh muscle tissues ex vivo.}
     \itemHeadings
         {\textbf{Turnbull Lab, Icahn School of Medicine at Mount Sinai}}
-        {\textbf{June 2021 - present}}
+        {\textbf{June 2021 - September 2021}}
         {Research Assistant}
         {New York City, USA}
         \itemitems
