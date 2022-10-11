@@ -1,12 +1,25 @@
 % Repo: https://github.com/jack-alope/resume
 
 \documentclass[letterpaper,11pt]{article}
-\pagestyle{empty}
+%\pagestyle{empty}
 
 \usepackage[utf8]{inputenc}
-\usepackage[a4paper, portrait, margin=.5in]{geometry}
-\usepackage{hyperref}
+\usepackage[a4paper, portrait, margin=.5in, top=.6in, bottom=.6in]{geometry}
+\usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
+
+\usepackage{lastpage}
+\usepackage[lastpage,user]{zref}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{}
+\lfoot{Jack F. Murphy}
+\renewcommand{\footrulewidth}{0.4pt}
 
 \usepackage{tabularx}
 
@@ -16,7 +29,7 @@
 
 % -------------= Items Header Style -------------------------------
 \newcommand{\itemHeadings}[4]{
-    \begin{tabularx}{\textwidth} {>{\hsize=.6\textwidth\raggedright\arraybackslash}X 
+    \begin{tabularx}{\textwidth} {>{\hsize=.65\textwidth\raggedright\arraybackslash}X 
    >{\raggedleft\arraybackslash}X}
       #1 & \small#2 \\
       #3 & \small#4
@@ -75,32 +88,43 @@
 % -------- Heading -------------------------------------------------------------
 \heading
     {Jack F. Murphy}
-    {email: jack@mrph.dev}
+    %{email: jack@mrph.dev}
+    {jfm65@cam.ac.uk}
     {website: \href{https://jack.engineering}{https://jack.engineering}}
 % ------------------------------------------------------------------------------
 
 % ----------- Research Interests ------------------------------------------------------
 %\section*{Research Interests}
 \noindent
-
+\vspace{0cm}
 % --------------------------------------------------------------------------------------
 
 % ----------- Education --------------------------------------------------------
 \sect{Education}
     \itemHeadings
-        {\textbf{Trinity College Dublin, The University of Dublin}}
-        {\textbf{Expected 2018 - 2022}}
-        {\emph{B.A.I in Biomedical Engineering}}
-        {Dublin, Ireland}
-        \itemitems
-            {First Class Honours ($>$70\%) every year to date}
+        {\textbf{The University of Cambridge}, Hughes Hall}
+        {\textbf{Expected October 2022 - 2026}}
+        {\hspace{5pt}\emph{PhD in Engineering, Bioengineering}}
+        {Cambridge, UK}
+        %\itemitems
+        %    {Thesis: Biomimetic, electroactive heart-on-a-chip platform. }
     \itemHeadings
-        {\textbf{The High School for Math, Science, and Engineering}}
-        {\textbf{September 2014 - June 2018}}
-        {\emph{New York Regents Diploma, Advanced Designation with Honors}}
-        {New York City, USA}
+        {\textbf{Trinity College Dublin}, The University of Dublin}
+        {\textbf{September 2018 - May 2022}}
+        %{\hspace{5pt}\emph{B.A.I in Biomedical Engineering, First Class Honours}}
+        {\hspace{5pt}\emph{Baccalaureus in Arte Ingeniaria (B.A.I), Biomedical Engineering}}
+        {Dublin, IE}
         \itemitems
-            {Community Service and Mastery in Mathematics Distinctions}
+            {First Class Honours}
+        \itemitems
+            {Thesis: 'Metabiomaterial: Multi-layed 3D immunomodulating patch'}
+    % \itemHeadings
+    %     {\textbf{The High School for Math, Science, and Engineering}}
+    %     {\textbf{September 2014 - June 2018}}
+    %     {\hspace{5pt}\emph{New York Regents Diploma, Advanced Designation with Honors}}
+    %     {New York City, USA}
+    %     \itemitems
+    %         {Community Service and Mastery in Mathematics Distinctions}
 
 % ------------------------------------------------------------------------------
 
@@ -108,14 +132,14 @@
 \sect{Publications}
     \projHeadings{\textbf{Journal Articles}}{}
         \itemitems
-            {J.F. Murphy \emph{et al., Manuscript submitted for publication.} (2021)}
+            {J.F. Murphy \emph{et al., Stem Cell Research and Therapy.} \href{https://doi.org/10.1186/s13287-019-1486-4}{doi:10.1186/s13287-019-1486-4} (2019)}
         \itemitems
-            {J.F. Murphy \emph{et al., Stem Cell Research and Therapy.} \href{https://doi.org/10.1186/s13287-019-1486-4}{doi:~10.1186/s13287-019-1486-4} (2019)}
+            {J. Mayourian \emph{et al., Circulation Research.} \href{https://doi.org/10.1161/CIRCRESAHA.118.312420}{doi:10.1161/CIRCRESAHA.118.312420} (2018)}
         \itemitems
-            {J. Mayourian \emph{et al., Circulation Research.} \href{https://doi.org/10.1161/CIRCRESAHA.118.312420}{doi: 10.1161/CIRCRESAHA.118.312420} (2018)}
+            {J.F. Murphy \emph{et al., SSRN Electronic Journal [preprint].} \href{https://doi.org/10.2139/ssrn.4046466}{doi:10.2139/ssrn.4046466} (2022)}
     \projHeadings{\textbf{Book Chapters}}{}
         \itemitems
-            {I. C. Turnbull \emph{et al., Methods in Molecular Biology.} \href{https://doi.org/10.1007/978-1-4939-8597-5\_11}{doi: 10.1007/978-1-4939-8597-5\_11(2018)}}
+            {I. C. Turnbull \emph{et al., Methods in Molecular Biology.} \href{https://doi.org/10.1007/978-1-4939-8597-5\_11}{doi:10.1007/978-1-4939-8597-5\_11} (2018)}
     \projHeadings{\textbf{Conference Abstracts}}{}
         \itemitems
             {J.F. Murphy \emph{et al., Biomedical Engineering Society Annual Meeting.} (2019)}
@@ -134,13 +158,15 @@
 \sect{Research Experience}
     \itemHeadings
         {\textbf{Monaghan Lab, Trinity Centre for Bioengineering}}
-        {\textbf{September 2018 - present}}
+        {\textbf{September 2018 - May 2022}}
         {Research Assistant}
-        {Dublin, Ireland}
+        {Dublin, IE}
         \itemitems
-            {Provide expertise to PhD students on 3D design and printing, induced-pluripotent stem cell culture and differentiation, and engineered cardiac tissue fabrication techniques. }
+            {Characterised a novel biomaterial's mechanical and physiochemical properties through tensile testing, ELISA assays, FTIR analysis, mass spectroscopy, flow cytometry, and contact angle assessment.}
         \itemitems
-            {Key exchange point of international collaboration between the Costa Lab and the Monaghan Lab. Focused on adapting an engineered cardiac tissue bioreactor for use with a novel pacing system.}
+            {Provided expertise to PhD students on 3D design and printing, induced-pluripotent stem cell culture and differentiation, and engineered cardiac tissue fabrication techniques. }
+        \itemitems
+            {Key exchange point of international collaboration between the Costa Lab (NYC) and the Monaghan Lab (Dublin). Focused on adapting an engineered cardiac tissue bioreactor for use with a novel pacing system.}
         \itemitems
             {Performed histological staining and analysis of tissue explants with polarized light microscopy to characterize fibrotic encapsulation around next-generation silicone implants. }
         \itemitems
@@ -164,20 +190,11 @@
         \itemitems
             {Maintained induced-pluripotent stem cells (iPSCs), mesenchymal stem cells, and cardiac stem cells in culture.}
         \itemitems
-            {Differentiated iPSCs into cardiomyocytes and fabricated 3D human engineered cardiac tissues. Used engineered tissue as a testing platform for various drug- and cell-based therapies for cardiac regeneration}
+            {Differentiated iPSCs into cardiomyocytes and fabricated 3D human engineered cardiac tissues. Used engineered tissue as a testing platform for various drug- and cell-based therapies for cardiac regeneration.}
         \itemitems
             {Used existing LabVIEW and MATLAB software to collect and analyze data on cardiac function.}
         \itemitems
             {Designed and printed 3D accessories to help with the data collection process.}
-    \itemHeadings
-        {\textbf{Center for Excellence in Youth Education at Mount Sinai}}
-        {\textbf{September 2016 – June 2018}}
-        {Research Scholar}
-        {New York City, USA}
-        \itemitems
-            {Guided middle school students through laboratory dissection of the heart, eye, and kidney.}
-        \itemitems
-            {Finalist in the New York City Science and Engineering Fair with research carried out in the Costa Lab.}
     \itemHeadings
         {\textbf{Dean Lab, Columbia University}}
         {\textbf{June 2017 - December 2017}}
@@ -188,24 +205,48 @@
         \itemitems
             {Created a graphene device insulated by boron nitride and used atomic force microscopy to identify imperfections.}
 % -----------------------------------------------------------------------------------
-
+\sect{Teaching Experience}
+    \itemHeadings
+        {\textbf{Voluntary Tuition Program, Trinity College Dublin}}
+        {\textbf{September 2018 - May 2019}}
+        {Maths Tutor}
+        {Dublin, IE}
+        \itemitems
+            {Met with a primary school student each week to aid them in their understanding of maths.}
+    \itemHeadings
+        {\textbf{Center for Excellence in Youth Education at Mount Sinai}}
+        {\textbf{September 2016 – June 2018}}
+        {Research Scholar}
+        {New York City, USA}
+        \itemitems
+            {Guided middle school students through laboratory dissections of the heart, eye, and kidney.}
+        \itemitems
+            {Provided guidance and advice on the New York City high school application process.}
 % ----------- Projects ---------------------------------------------------  
-\sect{Projects}
-    \projH{\textbf{Rian\'u:} Multi-tissue tracking software for increased throughput of engineered cardiac tissue screening.}
+\sect{Open Source Projects}
+    \projH{\textbf{Rian\'u:} Multi-tissue tracking software for increased throughput of engineered cardiac tissue screening}{\hspace*{.5cm}\url{https://rianu.mrph.dev}}\\
         \itemitems
             {Identified a bottleneck in existing engineered cardiac tissue analysis software.}
         \itemitems
-            {Created a web application capable of tracking and analyzing multiple engineered cardiac tissue simultaneously.}
+            {Created a web application capable of tracking and analyzing multiple engineered cardiac tissues simultaneously.}
         \itemitems
-            {Validated this software against existing software in the field and provided detailed documentation for its use.}
-    \projH{\textbf{Web Design}}
+            {Validated this software against existing software and provided detailed documentation for its use.}
         \itemitems
-            {Developed my personal portfolio website that automatically updates citation counts by paper DOI.}
+            {Actively maintain this software and will release it open-source under the BSD 3-Clause License upon publication.}
+    %\projH{\textbf{Web Design}}
+    %    \itemitems
+       %     {Developed my personal portfolio website that automatically updates citation counts by paper DOI.}
         %\itemitems
         %    {Released the custom theme open-source \href{https://themes.gohugo.io/themes/sourgough-starter/}{(\small themes.gohugo.io/themes/sourgough-starter}).}
+        %\itemitems
+        %    {Created websites for various projects, other students, a student society, a band, and for software documentation.}
+    \projH{\textbf{doi3bib}: A website that converts DOI's into \LaTeX~compatible bibtex entries}{\hspace*{.5cm}\url{https://doi3bib.com}}\\
         \itemitems
-            {Created websites for various projects, other students, a student society, a band, and for software documentation.}
+            {A simple serverless web app that returns latex compatible bibtex entries when supplied with a DOI or PMID.}
+        \itemitems
+            {Obtains bibtex entries for doi.org or crossref.org and parses them to make sure they are compatible with \LaTeX.}
 % ------------------------------------------------------------------------
+
 
 % ----------- Volunteer Experience ---------------------------------------------------
 %\section*{Volunteer Experience}
@@ -228,6 +269,12 @@
 \sect{Further Information}
     \projHeadings{\textbf{Awards}}{}
         \itemitems
+            {W.D Armstrong Studentship, School of Technology, University of Cambridge (2022 - 2026)}
+        \itemitems
+            {Honorary Robert Gardiner Memorial Scholarship, University of Cambridge (2022)}
+        \itemitems
+            {Book Prize, Department of Engineering, Trinity College Dublin (2019, 2020, 2021)}
+        \itemitems
             {New York City Science and Engineering Fair (NYCSEF) Finalist, Second Award (2018)}
         \itemitems
             {Frank W. and Jane J. Stahl Memorial Award for Technical Excellence, NYCSEF (2018)}
@@ -235,15 +282,18 @@
             {Naval Science Award, Office of Naval Research, NYCSEF (2018)}
     \projHeadings{\textbf{Memberships}}{}
         \itemitems
-            {Engineers Ireland, Student Membership (2018 - present)}
+            {Engineers Ireland, Student Membership (2018 - 2022)}
     \projHeadings{\textbf{Citizenships}}{}
         \itemitems
-            {United States of America}
-        \itemitems
             {Republic of Ireland}
+        \itemitems
+            {United States of America}
+    \projHeadings{\textbf{Sports}}{}
+        \itemitems
+            {Cambridge University Blues Men's Ice Hockey Team, Defenceman (2022 - present)}
     \projHeadings{\textbf{Skills}}{}
         \itemitems
-            {Programming: C++, Docker, Python including OpenCV, Web design including Hugo and Bootstrap}
+            {Programming: C++, Docker, Python including OpenCV, JS, Web design, MATLAB}
         \itemitems
             {CAD: Solidworks, Autodesk Fusion 360, Revit and Inventor, OpenSCAD}
         \itemitems
@@ -253,24 +303,24 @@
         \itemitems
             {Office: \LaTeX, EndNote 20, Microsoft Word}
             
-\sect{References}
-\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
-    \textbf{Kevin D. Costa} \newline 
-    Associate Professor of Medicine, Cardiology \newline
-    Icahn School of Medicine at Mount Sinai \newline
-    kevin.costa@mssm.edu
-    & 
-    \textbf{Michael G. Monaghan} \newline
-    Ussher Assistant Professor, Biomedical Engineering \newline
-    Trinity College Dublin \newline
-    monaghmi@tcd.ie
-    \\ \vspace*{.2cm}
+% \sect{References}
+% \begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+%     \textbf{Kevin D. Costa} \newline 
+%     Associate Professor of Medicine, Cardiology \newline
+%     Icahn School of Medicine at Mount Sinai \newline
+%     kevin.costa@mssm.edu
+%     & 
+%     \textbf{Michael G. Monaghan} \newline
+%     Ussher Assistant Professor, Biomedical Engineering \newline
+%     Trinity College Dublin \newline
+%     monaghmi@tcd.ie
+%     \\ \vspace*{.2cm}
 
-    \textbf{Irene C. Turnbull} \newline
-    Assistant Professor of Medicine, Cardiology \newline
-    Icahn School of Medicine at Mount Sinai \newline
-    irene.turnbull@mssm.edu
+%     \textbf{Irene C. Turnbull} \newline
+%     Assistant Professor of Medicine, Cardiology \newline
+%     Icahn School of Medicine at Mount Sinai \newline
+%     irene.turnbull@mssm.edu
     
-    \\
-\end{tabular}
+%     \\
+% \end{tabular}
 \end{document}
